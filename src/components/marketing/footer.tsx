@@ -9,8 +9,8 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-2">
-              <Image src="/logo.png" alt="TextoTools logo" width={32} height={32} />
-              <span className="font-semibold tracking-tight">TextoTools</span>
+              <Image src="/logo.png" alt="ContaTexto logo" width={32} height={32} />
+              <span className="font-semibold tracking-tight">ContaTexto</span>
             </div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
               Suite de ferramentas de texto rapidas, privadas e profissionais. Tudo
@@ -95,7 +95,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
-          <span>© 2026 TextoTools — Todos os direitos reservados</span>
+          <span>© 2026 ContaTexto — Todos os direitos reservados</span>
           <span>Monetizado com anuncios para manter uso gratuito</span>
         </div>
       </div>

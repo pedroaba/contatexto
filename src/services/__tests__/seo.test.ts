@@ -19,12 +19,12 @@ interface FaqSchema {
 }
 
 test("buildCanonicalUrl keeps the homepage at the root URL", () => {
-  assert.equal(buildCanonicalUrl("/"), "https://textotools.app/");
+  assert.equal(buildCanonicalUrl("/"), "https://contatexto.com/");
 });
 
 test("buildCanonicalUrl normalizes nested paths", () => {
-  assert.equal(buildCanonicalUrl("docs"), "https://textotools.app/docs");
-  assert.equal(buildCanonicalUrl("/about/"), "https://textotools.app/about");
+  assert.equal(buildCanonicalUrl("docs"), "https://contatexto.com/docs");
+  assert.equal(buildCanonicalUrl("/about/"), "https://contatexto.com/about");
 });
 
 test("getOgImagePath maps the homepage and internal pages to stable assets", () => {
@@ -40,10 +40,10 @@ test("buildSeo creates canonical, robots and social image metadata", () => {
     description: "Guia completo para revisar e otimizar textos.",
   });
 
-  assert.equal(seo.canonical, "https://textotools.app/docs");
+  assert.equal(seo.canonical, "https://contatexto.com/docs");
   assert.equal(seo.robotsExtras, "max-snippet:-1, max-image-preview:large, max-video-preview:-1");
-  assert.equal(seo.openGraph.basic.image, "https://textotools.app/logo.png");
-  assert.equal(seo.twitter.image, "https://textotools.app/logo.png");
+  assert.equal(seo.openGraph.basic.image, "https://contatexto.com/logo.png");
+  assert.equal(seo.twitter.image, "https://contatexto.com/logo.png");
 });
 
 test("buildFaqSchema converts visible FAQs into JSON-LD", () => {

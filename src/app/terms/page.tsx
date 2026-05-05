@@ -7,9 +7,9 @@ export const metadata = buildMetadata({
   path: "/terms",
   title: "Termos de Uso",
   description:
-    "Leia os Termos de Uso do TextoTools para entender regras, limites, responsabilidades e condicoes gerais da plataforma.",
+    "Leia os Termos de Uso do ContaTexto para entender regras, limites, responsabilidades e condicoes gerais da plataforma.",
   keywords: [
-    "termos de uso textotools",
+    "termos de uso contatexto",
     "contador de caracteres",
     "termos",
     "plataforma de texto",
@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
 const sections = [
   {
     title: "Uso da plataforma",
-    body: "O TextoTools foi criado para apoiar fluxos legítimos de escrita, revisão, contagem de caracteres, contagem de palavras e análise textual. O uso da plataforma deve respeitar a legislação aplicável e não pode comprometer a segurança, estabilidade ou disponibilidade do serviço.",
+    body: "O ContaTexto foi criado para apoiar fluxos legítimos de escrita, revisão, contagem de caracteres, contagem de palavras e análise textual. O uso da plataforma deve respeitar a legislação aplicável e não pode comprometer a segurança, estabilidade ou disponibilidade do serviço.",
   },
   {
     title: "Conteúdo enviado pelo usuário",
@@ -35,19 +35,19 @@ const sections = [
   },
   {
     title: "Resultados gerados pela ferramenta",
-    body: "O TextoTools oferece recursos de apoio para contagem de caracteres, análise de texto, revisão, SEO e otimização de conteúdo. Apesar de buscarmos precisão e qualidade, o usuário deve revisar resultados importantes antes de tomar decisões profissionais, jurídicas, financeiras, acadêmicas ou editoriais com base neles.",
+    body: "O ContaTexto oferece recursos de apoio para contagem de caracteres, análise de texto, revisão, SEO e otimização de conteúdo. Apesar de buscarmos precisão e qualidade, o usuário deve revisar resultados importantes antes de tomar decisões profissionais, jurídicas, financeiras, acadêmicas ou editoriais com base neles.",
   },
   {
     title: "Responsabilidade do usuário",
-    body: "Ao utilizar o TextoTools, você concorda em usar a plataforma de forma responsável, ética e compatível com sua finalidade. Não é permitido tentar explorar vulnerabilidades, automatizar acessos abusivos, prejudicar outros usuários ou utilizar o serviço de maneira que comprometa sua operação.",
+    body: "Ao utilizar o ContaTexto, você concorda em usar a plataforma de forma responsável, ética e compatível com sua finalidade. Não é permitido tentar explorar vulnerabilidades, automatizar acessos abusivos, prejudicar outros usuários ou utilizar o serviço de maneira que comprometa sua operação.",
   },
   {
     title: "Privacidade e tratamento de dados",
-    body: "A privacidade faz parte da proposta do TextoTools. Sempre que possível, priorizamos o processamento local no navegador e buscamos reduzir a coleta desnecessária de dados. Informações sobre tratamento de dados, privacidade e segurança estão descritas na nossa Política de Privacidade.",
+    body: "A privacidade faz parte da proposta do ContaTexto. Sempre que possível, priorizamos o processamento local no navegador e buscamos reduzir a coleta desnecessária de dados. Informações sobre tratamento de dados, privacidade e segurança estão descritas na nossa Política de Privacidade.",
   },
   {
     title: "Atualizações destes termos",
-    body: "Estes Termos de Uso podem ser atualizados conforme o TextoTools evolui. Quando isso acontecer, a versão publicada nesta página passará a refletir as regras vigentes para uso da plataforma.",
+    body: "Estes Termos de Uso podem ser atualizados conforme o ContaTexto evolui. Quando isso acontecer, a versão publicada nesta página passará a refletir as regras vigentes para uso da plataforma.",
   },
 ];
 
@@ -57,9 +57,9 @@ export default async function TermsPage() {
       <StructuredData
         data={buildWebPageSchema({
           path: "/terms",
-          title: "Termos de Uso do TextoTools",
+          title: "Termos de Uso do ContaTexto",
           description:
-            "Leia os Termos de Uso do TextoTools para entender regras, limites, responsabilidades e condicoes gerais da plataforma.",
+            "Leia os Termos de Uso do ContaTexto para entender regras, limites, responsabilidades e condicoes gerais da plataforma.",
         })}
       />
       <ProductBar />
@@ -72,13 +72,13 @@ export default async function TermsPage() {
             </span>
 
             <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              Termos de Uso do TextoTools: regras para usar nossas ferramentas
+              Termos de Uso do ContaTexto: regras para usar nossas ferramentas
               de texto com segurança
             </h1>
 
             <p className="mt-4 text-sm leading-6 text-muted-foreground md:text-base">
               Estes Termos de Uso explicam as condições gerais para utilizar o
-              TextoTools, incluindo o contador de caracteres online, o contador
+              ContaTexto, incluindo o contador de caracteres online, o contador
               de palavras, os recursos de análise de texto e as funcionalidades
               gerais. O objetivo é apresentar regras claras, sem juridiquês
               desnecessário, para que você entenda suas responsabilidades e

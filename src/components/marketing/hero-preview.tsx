@@ -27,7 +27,7 @@ export function HeroPreview() {
             <span className="h-3 w-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
             <span className="h-3 w-3 rounded-full bg-zinc-300 dark:bg-zinc-700" />
           </div>
-          <span className="font-mono text-xs text-muted-foreground">textotools.app</span>
+          <span className="font-mono text-xs text-muted-foreground">contatexto.com</span>
           <span />
         </div>
 

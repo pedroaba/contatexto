@@ -21,8 +21,8 @@ export function ProductBarClient() {
     <div className="border-b border-border bg-background">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-8">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="TextoTools logo" width={28} height={28} />
-          <span className="text-sm font-semibold tracking-tight">TextoTools</span>
+          <Image src="/logo.png" alt="ContaTexto logo" width={28} height={28} />
+          <span className="text-sm font-semibold tracking-tight">ContaTexto</span>
         </Link>
 
         <nav

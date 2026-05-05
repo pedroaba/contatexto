@@ -4,7 +4,7 @@ export interface FlashToastPayload {
   type: "error" | "success";
 }
 
-const FLASH_TOAST_KEY = "textotools.flash-toast";
+const FLASH_TOAST_KEY = "contatexto.flash-toast";
 
 export function saveFlashToast(payload: FlashToastPayload) {
   if (typeof window === "undefined") {

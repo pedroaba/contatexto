@@ -11,9 +11,9 @@ export const metadata = buildMetadata({
   path: "/about",
   title: "Sobre",
   description:
-    "Conheca o TextoTools, plataforma para contar caracteres, revisar textos e otimizar conteudos com foco em privacidade, clareza e SEO.",
+    "Conheca o ContaTexto, plataforma para contar caracteres, revisar textos e otimizar conteudos com foco em privacidade, clareza e SEO.",
   keywords: [
-    "sobre textotools",
+    "sobre contatexto",
     "contador de caracteres online",
     "ferramentas de texto",
     "seo",
@@ -56,9 +56,9 @@ export default function AboutPage() {
       <StructuredData
         data={buildWebPageSchema({
           path: "/about",
-          title: "Sobre o TextoTools",
+          title: "Sobre o ContaTexto",
           description:
-            "Conheca o TextoTools, plataforma para contar caracteres, revisar textos e otimizar conteudos com foco em privacidade, clareza e SEO.",
+            "Conheca o ContaTexto, plataforma para contar caracteres, revisar textos e otimizar conteudos com foco em privacidade, clareza e SEO.",
         })}
       />
       <ProductBar />
@@ -72,7 +72,7 @@ export default function AboutPage() {
               <div className="lg:col-span-7">
                 <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-semibold backdrop-blur-sm">
                   <BadgeCheck className="h-3.5 w-3.5 text-primary" />
-                  Sobre o TextoTools
+                  Sobre o ContaTexto
                 </span>
 
                 <h1 className="mt-6 max-w-4xl text-5xl font-bold leading-[1.03] tracking-tight md:text-6xl">
@@ -80,7 +80,7 @@ export default function AboutPage() {
                 </h1>
 
                 <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-                  O TextoTools nasceu para ajudar pessoas e profissionais a contar
+                  O ContaTexto nasceu para ajudar pessoas e profissionais a contar
                   caracteres, revisar textos, otimizar conteúdos para SEO e ganhar
                   mais clareza na escrita. A proposta é simples: criar ferramentas
                   rápidas, privadas e fáceis de usar para transformar textos em
@@ -92,7 +92,7 @@ export default function AboutPage() {
                 <div className="rounded-[1.8rem] border border-border bg-card p-7">
                   <h2 className="text-2xl font-bold tracking-tight">Modelo do produto</h2>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    O TextoTools agora e uma ferramenta 100% gratuita. Nao existe
+                    O ContaTexto agora e uma ferramenta 100% gratuita. Nao existe
                     assinatura, dashboard ou login.
                   </p>
                 </div>
@@ -171,7 +171,7 @@ export default function AboutPage() {
                 <h2 className="mt-3 text-4xl font-bold tracking-tight">Recursos principais</h2>
 
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  O TextoTools combina metricas objetivas para ajudar voce a tomar
+                  O ContaTexto combina metricas objetivas para ajudar voce a tomar
                   melhores decisoes antes de publicar um conteudo.
                 </p>
               </div>
@@ -204,7 +204,7 @@ export default function AboutPage() {
                 <div className="lg:col-span-8">
                   <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/80 px-3 py-1 text-xs font-semibold backdrop-blur-sm">
                     <Lock className="h-3.5 w-3.5 text-primary" />
-                    TextoTools
+                    ContaTexto
                   </span>
 
                   <h2 className="mt-5 text-4xl font-bold tracking-tight">
@@ -213,7 +213,7 @@ export default function AboutPage() {
 
                   <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground">
                     Seja para SEO, redes sociais, anúncios, estudos, landing pages
-                    ou textos profissionais, o TextoTools existe para ajudar você a
+                    ou textos profissionais, o ContaTexto existe para ajudar você a
                     escrever com mais clareza, revisar com mais rapidez e publicar
                     com mais segurança.
                   </p>

@@ -1,4 +1,4 @@
-# TextoTools
+# ContaTexto
 
 Ferramenta online gratuita para contar caracteres, palavras, frases, paragrafos e tempo de leitura com foco em clareza e SEO.
 

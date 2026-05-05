@@ -91,22 +91,207 @@ export function TextToolSection() {
     window.setTimeout(() => setCopied(false), 1200);
   }
 
-  function handleExport() {
-    const blob = new Blob([text], {
-      type: "text/plain;charset=utf-8",
-    });
+  function buildReport() {
+    const exportedAt = new Date().toLocaleString("pt-BR");
+    const summary = analysis.summary;
+    const metrics = analysis.metrics;
+    const quality = analysis.quality;
+    const platformLimits = analysis.platformLimits;
+
+    const report = [
+      "=== ContaTexto - Exportacao ===",
+      `Gerado em: ${exportedAt}`,
+      "",
+      "Resumo rapido:",
+      `- Caracteres: ${summary.characters}`,
+      `- Palavras: ${summary.words}`,
+      `- Frases: ${summary.sentences}`,
+      "",
+      "Metricas calculadas:",
+      ...metrics.map((metric) => `- ${metric.label}: ${metric.value}`),
+      "",
+      "Qualidade do texto:",
+      `- Legibilidade: ${quality.readabilityScore}/100 (${quality.readabilityLabel})`,
+      ...quality.items.map((item) => `- ${item.label}: ${item.value}`),
+      "",
+      "Limites por plataforma:",
+      ...platformLimits.map(
+        (limit) => `- ${limit.name}: ${limit.current}/${limit.max} (${limit.status})`,
+      ),
+      "",
+      "Texto:",
+      text,
+      "",
+    ].join("\n");
+
+    return { exportedAt, summary, metrics, quality, platformLimits, report };
+  }
+
+  function downloadBlob(content: BlobPart, type: string, filename: string) {
+    const blob = new Blob([content], { type });
     const url = URL.createObjectURL(blob);
     const link = document.createElement("a");
     link.href = url;
-    link.download = "texto.txt";
+    link.download = filename;
     link.click();
     URL.revokeObjectURL(url);
+  }
+
+  function handleExportTxt() {
+    const { report } = buildReport();
+    downloadBlob(report, "text/plain;charset=utf-8", "contatexto-relatorio.txt");
+    toast.success("Exportado em TXT");
+  }
+
+  function handleExportCsv() {
+    const { exportedAt, summary, metrics, quality, platformLimits } = buildReport();
+    const escapeCsv = (value: string | number) =>
+      `"${String(value).replaceAll('"', '""')}"`;
+    const rows = [
+      ["tipo", "nome", "valor", "detalhe"],
+      ["meta", "gerado_em", exportedAt, ""],
+      ["resumo", "caracteres", summary.characters, ""],
+      ["resumo", "palavras", summary.words, ""],
+      ["resumo", "frases", summary.sentences, ""],
+      ...metrics.map((metric) => ["metrica", metric.label, metric.value, metric.hint]),
+      [
+        "qualidade",
+        "legibilidade",
+        `${quality.readabilityScore}/100`,
+        quality.readabilityLabel,
+      ],
+      ...quality.items.map((item) => ["qualidade", item.label, item.value, ""]),
+      ...platformLimits.map((limit) => [
+        "limite_plataforma",
+        limit.name,
+        `${limit.current}/${limit.max}`,
+        limit.status,
+      ]),
+    ];
+    const csv = rows
+      .map((row) => row.map((cell) => escapeCsv(cell)).join(","))
+      .join("\n");
+    downloadBlob(csv, "text/csv;charset=utf-8", "contatexto-relatorio.csv");
+    toast.success("Exportado em CSV");
+  }
+
+  async function handleExportPdf() {
+    const { exportedAt, summary, metrics, quality, platformLimits, report } =
+      buildReport();
+    const { jsPDF } = await import("jspdf");
+    const doc = new jsPDF({
+      orientation: "portrait",
+      unit: "pt",
+      format: "a4",
+    });
+    const pageWidth = doc.internal.pageSize.getWidth();
+    const pageHeight = doc.internal.pageSize.getHeight();
+    const margin = 36;
+    let y = 132;
+
+    const ensureSpace = (requiredHeight: number) => {
+      if (y + requiredHeight <= pageHeight - margin) return;
+      doc.addPage();
+      y = margin;
+    };
+
+    const drawSectionTitle = (title: string) => {
+      ensureSpace(30);
+      doc.setFillColor(241, 245, 249);
+      doc.roundedRect(margin, y, pageWidth - margin * 2, 24, 6, 6, "F");
+      doc.setTextColor(14, 165, 233);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(11);
+      doc.text(title, margin + 10, y + 16);
+      y += 34;
+    };
+
+    const drawList = (items: string[]) => {
+      doc.setTextColor(30, 41, 59);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(10);
+      items.forEach((item) => {
+        const lines = doc.splitTextToSize(`• ${item}`, pageWidth - margin * 2 - 8);
+        ensureSpace(lines.length * 14 + 4);
+        doc.text(lines, margin + 4, y);
+        y += lines.length * 14 + 2;
+      });
+      y += 6;
+    };
+
+    doc.setFillColor(3, 105, 161);
+    doc.rect(0, 0, pageWidth, 110, "F");
+    doc.setTextColor(255, 255, 255);
+    doc.setFont("helvetica", "bold");
+    doc.setFontSize(24);
+    doc.text("ContaTexto", margin, 48);
+    doc.setFont("helvetica", "normal");
+    doc.setFontSize(12);
+    doc.text("Relatorio de metricas e qualidade", margin, 68);
+    doc.setFontSize(10);
+    doc.text(`Gerado em ${exportedAt}`, margin, 86);
+
+    drawSectionTitle("Resumo rapido");
+    doc.setFillColor(255, 255, 255);
+    doc.setDrawColor(226, 232, 240);
+    const cardWidth = (pageWidth - margin * 2 - 16) / 3;
+    const cards = [
+      { label: "Caracteres", value: String(summary.characters) },
+      { label: "Palavras", value: String(summary.words) },
+      { label: "Frases", value: String(summary.sentences) },
+    ];
+    cards.forEach((card, index) => {
+      const x = margin + index * (cardWidth + 8);
+      ensureSpace(72);
+      doc.setFillColor(248, 250, 252);
+      doc.setDrawColor(203, 213, 225);
+      doc.roundedRect(x, y, cardWidth, 64, 8, 8, "FD");
+      doc.setTextColor(71, 85, 105);
+      doc.setFont("helvetica", "normal");
+      doc.setFontSize(10);
+      doc.text(card.label, x + 10, y + 22);
+      doc.setTextColor(15, 23, 42);
+      doc.setFont("helvetica", "bold");
+      doc.setFontSize(20);
+      doc.text(card.value, x + 10, y + 47);
+    });
+    y += 78;
+
+    drawSectionTitle("Metricas calculadas");
+    drawList(metrics.map((metric) => `${metric.label}: ${metric.value} (${metric.hint})`));
+
+    drawSectionTitle("Qualidade do texto");
+    drawList([
+      `Legibilidade: ${quality.readabilityScore}/100 (${quality.readabilityLabel})`,
+      ...quality.items.map((item) => `${item.label}: ${item.value}`),
+    ]);
+
+    drawSectionTitle("Limites por plataforma");
+    drawList(
+      platformLimits.map(
+        (limit) => `${limit.name}: ${limit.current}/${limit.max} - ${limit.status}`,
+      ),
+    );
+
+    drawSectionTitle("Texto exportado");
+    doc.setTextColor(30, 41, 59);
+    doc.setFont("courier", "normal");
+    doc.setFontSize(9);
+    const textLines = doc.splitTextToSize(report.split("\nTexto:\n")[1] ?? "", pageWidth - margin * 2 - 8);
+    textLines.forEach((line: string) => {
+      ensureSpace(13);
+      doc.text(line, margin + 4, y);
+      y += 13;
+    });
+
+    doc.save("contatexto-relatorio.pdf");
+    toast.success("Exportado em PDF");
   }
 
   return (
     <>
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-        <AdSlot size="leaderboard" slot="1111111111" />
+        <AdSlot size="leaderboard" />
       </div>
 
       <section
@@ -171,9 +356,23 @@ export function TextToolSection() {
                   <button
                     className="shadow-soft inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
                     type="button"
-                    onClick={handleExport}
+                    onClick={handleExportTxt}
                   >
-                    <Download className="h-3.5 w-3.5" /> Exportar
+                    <Download className="h-3.5 w-3.5" /> TXT
+                  </button>
+                  <button
+                    className="shadow-soft inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                    type="button"
+                    onClick={handleExportCsv}
+                  >
+                    <Download className="h-3.5 w-3.5" /> CSV
+                  </button>
+                  <button
+                    className="shadow-soft inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+                    type="button"
+                    onClick={() => void handleExportPdf()}
+                  >
+                    <Download className="h-3.5 w-3.5" /> PDF
                   </button>
                 </div>
               </div>
@@ -279,7 +478,7 @@ export function TextToolSection() {
               </div>
             </div>
 
-            <AdSlot size="rectangle" slot="2222222222" />
+            <AdSlot size="rectangle" />
           </aside>
         </div>
 
@@ -310,7 +509,7 @@ export function TextToolSection() {
         </div>
 
         <div className="pt-6">
-          <AdSlot size="inline" className="mx-auto max-w-3xl" slot="3333333333" />
+          <AdSlot size="inline" className="mx-auto max-w-3xl" />
         </div>
       </section>
     </>

@@ -44,7 +44,7 @@ export const homeFaqItems: FaqItem[] = [
   {
     question: "A ferramenta e gratuita?",
     answer:
-      "Sim. O TextoTools e totalmente gratuito para uso. A monetizacao ocorre com blocos de anuncios na pagina.",
+      "Sim. O ContaTexto e totalmente gratuito para uso. A monetizacao ocorre com blocos de anuncios na pagina.",
   },
   {
     question: "Preciso de conta para usar?",

@@ -12,7 +12,7 @@ const docHighlights = [
     href: "/docs#use-cases",
     eyebrow: "02",
     title: "Para que serve",
-    body: "Entenda como aplicar o TextoTools em SEO, social media, copy, blogs, landing pages e videos.",
+    body: "Entenda como aplicar o ContaTexto em SEO, social media, copy, blogs, landing pages e videos.",
   },
   {
     href: "/docs#seo-guide",

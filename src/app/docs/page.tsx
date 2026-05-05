@@ -10,9 +10,9 @@ export const metadata = buildMetadata({
   path: "/docs",
   title: "Documentacao",
   description:
-    "Guia do TextoTools para contar caracteres, revisar textos, ajustar meta title, meta description e melhorar conteudos para SEO e redes sociais.",
+    "Guia do ContaTexto para contar caracteres, revisar textos, ajustar meta title, meta description e melhorar conteudos para SEO e redes sociais.",
   keywords: [
-    "documentacao textotools",
+    "documentacao contatexto",
     "contador de caracteres",
     "meta title",
     "meta description",
@@ -32,7 +32,7 @@ const quickLinks = [
     href: "/privacy",
     title: "Política de privacidade",
     description:
-      "Veja como o TextoTools trata dados, minimiza coleta e prioriza processamento local no navegador.",
+      "Veja como o ContaTexto trata dados, minimiza coleta e prioriza processamento local no navegador.",
   },
   {
     href: "/terms",
@@ -51,7 +51,7 @@ const seoTips = [
   {
     title: "Legendas de Instagram",
     description:
-      "Crie legendas diretas, com boa abertura, informação útil e chamada para ação. O TextoTools ajuda a revisar tamanho, clareza, estrutura e repetição de palavras.",
+      "Crie legendas diretas, com boa abertura, informação útil e chamada para ação. O ContaTexto ajuda a revisar tamanho, clareza, estrutura e repetição de palavras.",
   },
   {
     title: "Posts para LinkedIn",
@@ -97,19 +97,19 @@ const faqItems = [
       "A experiência foi desenhada para priorizar o processamento local no navegador, com foco em privacidade, velocidade e simplicidade.",
   },
   {
-    question: "Como usar o TextoTools para SEO?",
+    question: "Como usar o ContaTexto para SEO?",
     answer:
-      "Você pode usar o TextoTools para revisar meta titles, meta descriptions, descrições de produtos, títulos de páginas, posts de blog, legendas de redes sociais, bios, títulos de YouTube e textos de landing pages.",
+      "Você pode usar o ContaTexto para revisar meta titles, meta descriptions, descrições de produtos, títulos de páginas, posts de blog, legendas de redes sociais, bios, títulos de YouTube e textos de landing pages.",
   },
   {
     question: "Criadores de conteúdo podem usar a ferramenta?",
     answer:
-      "Sim. Criadores de conteúdo, social media, redatores, copywriters e profissionais de marketing podem usar o TextoTools para melhorar posts, legendas, descrições, títulos, chamadas para ação e textos de campanhas.",
+      "Sim. Criadores de conteúdo, social media, redatores, copywriters e profissionais de marketing podem usar o ContaTexto para melhorar posts, legendas, descrições, títulos, chamadas para ação e textos de campanhas.",
   },
   {
     question: "A ferramenta e paga?",
     answer:
-      "Nao. O TextoTools e totalmente gratuito. A monetizacao acontece por blocos de anuncio na interface.",
+      "Nao. O ContaTexto e totalmente gratuito. A monetizacao acontece por blocos de anuncio na interface.",
   },
 ];
 
@@ -120,9 +120,9 @@ export default function DocsPage() {
         data={[
           buildWebPageSchema({
             path: "/docs",
-            title: "Documentacao do TextoTools",
+            title: "Documentacao do ContaTexto",
             description:
-              "Guia do TextoTools para contar caracteres, revisar textos, ajustar meta title, meta description e melhorar conteudos para SEO e redes sociais.",
+              "Guia do ContaTexto para contar caracteres, revisar textos, ajustar meta title, meta description e melhorar conteudos para SEO e redes sociais.",
           }),
           buildFaqSchema(faqItems),
         ]}
@@ -137,11 +137,11 @@ export default function DocsPage() {
             </span>
 
             <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              Guia do TextoTools para contar, revisar e otimizar textos
+              Guia do ContaTexto para contar, revisar e otimizar textos
             </h1>
 
             <p className="mt-4 text-sm leading-6 text-muted-foreground md:text-base">
-              Aprenda a usar o TextoTools para contar caracteres, contar palavras,
+              Aprenda a usar o ContaTexto para contar caracteres, contar palavras,
               revisar textos e otimizar conteúdos para SEO. Este guia reúne os
               principais atalhos do produto, boas práticas de escrita e dicas para
               melhorar títulos, descrições, legendas de redes sociais, posts,
@@ -196,11 +196,11 @@ export default function DocsPage() {
 
           <article className="rounded-3xl border border-border bg-muted/30 p-6">
             <h2 className="text-xl font-semibold tracking-tight">
-              Para que serve o TextoTools?
+              Para que serve o ContaTexto?
             </h2>
 
             <p className="mt-4 text-sm leading-6 text-muted-foreground">
-              O TextoTools é uma suíte de ferramentas de texto para quem precisa
+              O ContaTexto é uma suíte de ferramentas de texto para quem precisa
               escrever melhor, revisar com rapidez e publicar com mais segurança.
               Ele ajuda em tarefas como contador de caracteres, contador de
               palavras, revisão de conteúdo, SEO, copywriting, posts, anúncios,
@@ -221,11 +221,11 @@ export default function DocsPage() {
             </span>
 
             <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-              Como usar o TextoTools para melhorar textos, SEO e conteúdos de redes sociais
+              Como usar o ContaTexto para melhorar textos, SEO e conteúdos de redes sociais
             </h2>
 
             <p className="mt-4 text-sm leading-6 text-muted-foreground md:text-base">
-              O TextoTools ajuda você a escrever textos mais claros, objetivos e
+              O ContaTexto ajuda você a escrever textos mais claros, objetivos e
               otimizados para diferentes canais. Use a ferramenta para revisar
               conteúdos de sites, blogs, landing pages, anúncios, descrições de
               produtos, legendas de Instagram, posts do LinkedIn, títulos de
@@ -325,7 +325,7 @@ export default function DocsPage() {
             <article className="rounded-2xl border border-border bg-card p-5">
               <h3 className="text-sm font-semibold">Sites, blogs e landing pages</h3>
               <p className="mt-2 text-sm leading-6 text-muted-foreground">
-                Use o TextoTools para revisar H1, títulos de seção, meta title,
+                Use o ContaTexto para revisar H1, títulos de seção, meta title,
                 meta description, chamadas e descrições antes de publicar páginas importantes.
               </p>
             </article>

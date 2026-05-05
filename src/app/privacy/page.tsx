@@ -7,9 +7,9 @@ export const metadata = buildMetadata({
   path: "/privacy",
   title: "Politica de Privacidade",
   description:
-    "Entenda como o TextoTools trata dados, prioriza processamento local no navegador e reduz coleta desnecessaria de informacoes.",
+    "Entenda como o ContaTexto trata dados, prioriza processamento local no navegador e reduz coleta desnecessaria de informacoes.",
   keywords: [
-    "privacidade textotools",
+    "privacidade contatexto",
     "contador de caracteres privado",
     "processamento local",
     "politica de privacidade",
@@ -17,7 +17,7 @@ export const metadata = buildMetadata({
 });
 
 const principles = [
-  "O TextoTools foi criado para priorizar o processamento local no navegador sempre que isso fizer sentido para a funcionalidade utilizada.",
+  "O ContaTexto foi criado para priorizar o processamento local no navegador sempre que isso fizer sentido para a funcionalidade utilizada.",
   "Nosso objetivo é reduzir a coleta desnecessária de dados e manter uma experiência simples, rápida, privada e transparente.",
   "Nao usamos login, assinatura ou dashboard. O produto e gratuito e focado em uso direto na pagina.",
 ];
@@ -25,7 +25,7 @@ const principles = [
 const sections = [
   {
     title: "O que fazemos com o seu texto",
-    body: "O TextoTools ajuda você a contar caracteres, contar palavras, analisar textos e revisar conteúdos com rapidez. A experiência principal da ferramenta foi pensada para funcionar diretamente no navegador, reduzindo a necessidade de envio constante do conteúdo digitado para servidores externos.",
+    body: "O ContaTexto ajuda você a contar caracteres, contar palavras, analisar textos e revisar conteúdos com rapidez. A experiência principal da ferramenta foi pensada para funcionar diretamente no navegador, reduzindo a necessidade de envio constante do conteúdo digitado para servidores externos.",
   },
   {
     title: "Quais dados podemos coletar",
@@ -33,7 +33,7 @@ const sections = [
   },
   {
     title: "O que evitamos coletar",
-    body: "Não queremos transformar o TextoTools em uma ferramenta de rastreamento. Por isso, buscamos evitar coleta excessiva, criação de perfis invasivos e uso desnecessário do conteúdo digitado pelo usuário. A privacidade é uma parte importante da experiência do produto.",
+    body: "Não queremos transformar o ContaTexto em uma ferramenta de rastreamento. Por isso, buscamos evitar coleta excessiva, criação de perfis invasivos e uso desnecessário do conteúdo digitado pelo usuário. A privacidade é uma parte importante da experiência do produto.",
   },
   {
     title: "Como protegemos as informações",
@@ -41,7 +41,7 @@ const sections = [
   },
   {
     title: "Seus controles e transparência",
-    body: "Sempre que possível, buscamos deixar claro quais dados fazem parte do fluxo do produto e por qual motivo eles são utilizados. Também mantemos textos públicos e políticas simples para que você entenda como a ferramenta funciona e o que pode esperar ao usar o TextoTools.",
+    body: "Sempre que possível, buscamos deixar claro quais dados fazem parte do fluxo do produto e por qual motivo eles são utilizados. Também mantemos textos públicos e políticas simples para que você entenda como a ferramenta funciona e o que pode esperar ao usar o ContaTexto.",
   },
 ];
 
@@ -51,9 +51,9 @@ export default async function PrivacyPage() {
       <StructuredData
         data={buildWebPageSchema({
           path: "/privacy",
-          title: "Politica de Privacidade do TextoTools",
+          title: "Politica de Privacidade do ContaTexto",
           description:
-            "Entenda como o TextoTools trata dados, prioriza processamento local no navegador e reduz coleta desnecessaria de informacoes.",
+            "Entenda como o ContaTexto trata dados, prioriza processamento local no navegador e reduz coleta desnecessaria de informacoes.",
         })}
       />
 
@@ -67,12 +67,12 @@ export default async function PrivacyPage() {
             </span>
 
             <h1 className="mt-4 text-3xl font-semibold tracking-tight md:text-5xl">
-              Privacidade no TextoTools: como tratamos dados e protegemos seus
+              Privacidade no ContaTexto: como tratamos dados e protegemos seus
               textos
             </h1>
 
             <p className="mt-4 text-sm leading-6 text-muted-foreground md:text-base">
-              Esta página explica, em linguagem clara, como o TextoTools trata
+              Esta página explica, em linguagem clara, como o ContaTexto trata
               dados durante o uso do contador de caracteres online, contador de
               palavras e ferramentas de análise de texto. Nossa ideia central é
               simples: usar o mínimo de dados necessário, priorizar o

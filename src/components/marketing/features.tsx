@@ -46,7 +46,7 @@ export function Features() {
               Tudo o que voce precisa para ajustar textos com mais rapidez.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
-              O TextoTools combina contagem precisa, contexto de plataforma e sinais
+              O ContaTexto combina contagem precisa, contexto de plataforma e sinais
               de qualidade em uma interface simples. A ideia e reduzir revisao
               manual e deixar o texto pronto mais cedo.
             </p>

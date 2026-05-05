@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
-const SITE_URL = "https://textotools.app";
-const SITE_NAME = "TextoTools";
+const SITE_URL = "https://contatexto.com";
+const SITE_NAME = "ContaTexto";
 const DEFAULT_LOCALE = "pt_BR";
 const DEFAULT_LANGUAGE = "pt-BR";
 const DEFAULT_ROBOTS_EXTRAS =

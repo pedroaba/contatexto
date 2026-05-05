@@ -25,10 +25,10 @@ export function AdSlot({
   size = "leaderboard",
 }: AdSlotProps) {
   const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
-  const shouldRenderAd = Boolean(adsenseClient && slot);
+  const shouldRenderManualAd = Boolean(adsenseClient && slot);
 
   useEffect(() => {
-    if (!shouldRenderAd) return;
+    if (!shouldRenderManualAd) return;
     try {
       ((window as unknown as { adsbygoogle?: unknown[] }).adsbygoogle ??= []).push(
         {},
@@ -36,7 +36,7 @@ export function AdSlot({
     } catch {
       // noop
     }
-  }, [shouldRenderAd, slot]);
+  }, [shouldRenderManualAd, slot]);
 
   return (
     <div
@@ -49,7 +49,7 @@ export function AdSlot({
       <span className="absolute left-3 top-2 text-[10px] font-medium uppercase tracking-[0.18em] text-muted-foreground/70">
         {label}
       </span>
-      {shouldRenderAd ? (
+      {shouldRenderManualAd ? (
         <ins
           className="adsbygoogle block h-full w-full"
           data-ad-client={adsenseClient}
@@ -59,7 +59,7 @@ export function AdSlot({
         />
       ) : (
         <span className="text-xs text-muted-foreground/60">
-          Defina NEXT_PUBLIC_ADSENSE_CLIENT_ID e slot para exibir anuncio
+          Publicidade
         </span>
       )}
     </div>

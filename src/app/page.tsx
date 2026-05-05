@@ -42,7 +42,7 @@ export default function HomePage() {
             path: "/",
             title: "Contador de caracteres online",
             description:
-              "Conte caracteres, palavras e otimize conteudos para SEO com o TextoTools.",
+              "Conte caracteres, palavras e otimize conteudos para SEO com o ContaTexto.",
           }),
           buildFaqSchema(homeFaqItems),
         ]}
@@ -115,15 +115,15 @@ export default function HomePage() {
       <TextToolSection />
       <Features />
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-        <AdSlot size="leaderboard" slot="4444444444" />
+        <AdSlot size="leaderboard" />
       </div>
       <DocumentationSection />
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-        <AdSlot size="inline" className="mx-auto max-w-3xl" slot="5555555555" />
+        <AdSlot size="inline" className="mx-auto max-w-3xl" />
       </div>
       <FaqSection />
       <div className="mx-auto max-w-7xl px-4 pb-6 md:px-8">
-        <AdSlot size="leaderboard" slot="6666666666" />
+        <AdSlot size="leaderboard" />
       </div>
 
       <Footer />
