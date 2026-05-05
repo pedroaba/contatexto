@@ -1,5 +1,8 @@
 # build output
 dist/
+.next/
+output/
+.pnpm-store/
 # generated types
 .astro/
 
