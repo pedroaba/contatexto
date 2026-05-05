@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Lock, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import { ArrowRight, Lock, ShieldCheck, Zap } from "lucide-react";
 
 import { AdSlot } from "@/components/marketing/ad-slot";
 import { DocumentationSection } from "@/components/marketing/documentation-section";
@@ -102,10 +102,6 @@ export default function HomePage() {
                   <Lock className="h-3.5 w-3.5 text-primary" /> Privado no
                   navegador
                 </div>
-                <div className="flex items-center gap-2">
-                  <Sparkles className="h-3.5 w-3.5 text-primary" /> Analise com
-                  IA no Pro
-                </div>
               </div>
             </div>
 
@@ -119,15 +115,15 @@ export default function HomePage() {
       <TextToolSection />
       <Features />
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-        <AdSlot size="leaderboard" />
+        <AdSlot size="leaderboard" slot="4444444444" />
       </div>
       <DocumentationSection />
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-        <AdSlot size="inline" className="mx-auto max-w-3xl" />
+        <AdSlot size="inline" className="mx-auto max-w-3xl" slot="5555555555" />
       </div>
       <FaqSection />
       <div className="mx-auto max-w-7xl px-4 pb-6 md:px-8">
-        <AdSlot size="leaderboard" />
+        <AdSlot size="leaderboard" slot="6666666666" />
       </div>
 
       <Footer />

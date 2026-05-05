@@ -24,13 +24,13 @@ test("buildCanonicalUrl keeps the homepage at the root URL", () => {
 
 test("buildCanonicalUrl normalizes nested paths", () => {
   assert.equal(buildCanonicalUrl("docs"), "https://textotools.app/docs");
-  assert.equal(buildCanonicalUrl("/pricing/"), "https://textotools.app/pricing");
+  assert.equal(buildCanonicalUrl("/about/"), "https://textotools.app/about");
 });
 
 test("getOgImagePath maps the homepage and internal pages to stable assets", () => {
-  assert.equal(getOgImagePath("/"), "/og/home.png");
-  assert.equal(getOgImagePath("/docs"), "/og/docs.png");
-  assert.equal(getOgImagePath("/pricing"), "/og/pricing.png");
+  assert.equal(getOgImagePath("/"), "/logo.png");
+  assert.equal(getOgImagePath("/docs"), "/logo.png");
+  assert.equal(getOgImagePath("/about"), "/logo.png");
 });
 
 test("buildSeo creates canonical, robots and social image metadata", () => {
@@ -42,8 +42,8 @@ test("buildSeo creates canonical, robots and social image metadata", () => {
 
   assert.equal(seo.canonical, "https://textotools.app/docs");
   assert.equal(seo.robotsExtras, "max-snippet:-1, max-image-preview:large, max-video-preview:-1");
-  assert.equal(seo.openGraph.basic.image, "https://textotools.app/og/docs.png");
-  assert.equal(seo.twitter.image, "https://textotools.app/og/docs.png");
+  assert.equal(seo.openGraph.basic.image, "https://textotools.app/logo.png");
+  assert.equal(seo.twitter.image, "https://textotools.app/logo.png");
 });
 
 test("buildFaqSchema converts visible FAQs into JSON-LD", () => {

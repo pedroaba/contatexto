@@ -5,7 +5,6 @@ import { seoSite } from "@/lib/seo";
 const routes = [
   "/",
   "/docs",
-  "/pricing",
   "/about",
   "/privacy",
   "/terms",
@@ -17,7 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency:
       route === "/"
         ? "daily"
-        : route === "/docs" || route === "/pricing"
+        : route === "/docs"
           ? "weekly"
           : "monthly",
     priority:
@@ -25,8 +24,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? 1
         : route === "/docs"
           ? 0.9
-          : route === "/pricing"
-            ? 0.8
-            : 0.6,
+          : 0.6,
   }));
 }

@@ -12,7 +12,6 @@ test("editorial and commercial pages include ad slots", () => {
   const pagesWithAds = {
     "src/app/about/page.tsx": 3,
     "src/app/docs/page.tsx": 3,
-    "src/app/pricing/page.tsx": 3,
   };
 
   Object.entries(pagesWithAds).forEach(([pagePath, minimumSlots]) => {

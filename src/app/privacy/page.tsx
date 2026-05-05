@@ -19,7 +19,7 @@ export const metadata = buildMetadata({
 const principles = [
   "O TextoTools foi criado para priorizar o processamento local no navegador sempre que isso fizer sentido para a funcionalidade utilizada.",
   "Nosso objetivo é reduzir a coleta desnecessária de dados e manter uma experiência simples, rápida, privada e transparente.",
-  "Quando recursos premium, autenticação ou integrações forem utilizados, os dados tratados nessas camadas serão limitados ao necessário para operar o serviço.",
+  "Nao usamos login, assinatura ou dashboard. O produto e gratuito e focado em uso direto na pagina.",
 ];
 
 const sections = [
@@ -29,7 +29,7 @@ const sections = [
   },
   {
     title: "Quais dados podemos coletar",
-    body: "Podemos coletar dados técnicos básicos para manter a plataforma funcionando corretamente, como informações de acesso, diagnóstico, preferências de uso e métricas essenciais de funcionamento. Caso você utilize conta, assinatura, cobrança ou recursos avançados, também poderemos tratar dados cadastrais relacionados exclusivamente a essas funcionalidades.",
+    body: "Podemos coletar dados técnicos básicos para manter a plataforma funcionando corretamente, como informações de acesso, diagnóstico, preferências de uso e métricas essenciais de funcionamento.",
   },
   {
     title: "O que evitamos coletar",

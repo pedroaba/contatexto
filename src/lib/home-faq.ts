@@ -42,13 +42,13 @@ export const homeFaqItems: FaqItem[] = [
       "Sim. A contagem principal acontece diretamente no navegador, ajudando a manter seus textos privados durante o uso da ferramenta. Isso é útil para revisar rascunhos, ideias, descrições, conteúdos de marketing, textos profissionais e materiais que você não quer expor publicamente.",
   },
   {
-    question: "Como funciona a análise de texto com IA?",
+    question: "A ferramenta e gratuita?",
     answer:
-      "A análise de texto com IA ajuda a melhorar clareza, tom, estrutura, legibilidade e SEO do conteúdo. Ela pode sugerir melhorias para títulos, descrições, posts, landing pages, anúncios e textos comerciais, ajudando você a transformar um rascunho em um conteúdo mais otimizado.",
+      "Sim. O TextoTools e totalmente gratuito para uso. A monetizacao ocorre com blocos de anuncios na pagina.",
   },
   {
-    question: "Posso cancelar a assinatura Pro quando quiser?",
+    question: "Preciso de conta para usar?",
     answer:
-      "Sim. Você pode cancelar a assinatura Pro a qualquer momento. Após o cancelamento, os recursos pagos continuam disponíveis até o fim do período já contratado, e novas cobranças automáticas deixam de ser realizadas.",
+      "Nao. Voce pode usar a ferramenta direto no navegador sem criar conta.",
   },
 ];

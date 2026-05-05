@@ -84,8 +84,7 @@ export function buildCanonicalUrl(path: string) {
 }
 
 export function getOgImagePath(path: string) {
-  const slug = trimSlashes(path) || "home";
-  return `/og/${slug}.png`;
+  return "/logo.png";
 }
 
 export function getAbsoluteUrl(path: string) {
@@ -289,12 +288,6 @@ export function buildSoftwareApplicationSchema(): JsonLdNode {
         price: "0",
         priceCurrency: "BRL",
         category: "Free",
-      },
-      {
-        "@type": "Offer",
-        price: "20",
-        priceCurrency: "BRL",
-        category: "Pro",
       },
     ],
   };

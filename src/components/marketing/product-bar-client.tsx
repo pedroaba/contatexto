@@ -3,24 +3,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutDashboard, LogIn, Sparkles } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 import { ModeToggle } from "@/components/toggle-mode";
 import { cn } from "@/lib/utils";
 
 const navItems = [
-  { href: "/pricing", label: "Precos", match: "/pricing" },
   { href: "/#tool", label: "Ferramenta", match: "/" },
   { href: "/docs", label: "Documentacao", match: "/docs" },
+  { href: "/about", label: "Sobre", match: "/about" },
 ];
 
-interface ProductBarClientProps {
-  isAuthenticated: boolean;
-}
-
-export function ProductBarClient({
-  isAuthenticated,
-}: ProductBarClientProps) {
+export function ProductBarClient() {
   const pathname = usePathname();
 
   return (
@@ -60,33 +54,13 @@ export function ProductBarClient({
         </nav>
 
         <div className="flex items-center gap-2">
-          {isAuthenticated ? (
-            <>
-              <Link
-                className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground shadow-soft hover:opacity-90"
-                href="/dashboard"
-              >
-                <LayoutDashboard className="h-3.5 w-3.5" /> Dashboard
-              </Link>
-              <ModeToggle />
-            </>
-          ) : (
-            <>
-              <Link
-                className="inline-flex items-center gap-1.5 rounded-lg border border-border bg-card px-3 py-1.5 text-xs font-medium hover:bg-accent"
-                href="/login"
-              >
-                <LogIn className="h-3.5 w-3.5" /> Entrar
-              </Link>
-              <Link
-                href="/#tool"
-                className="shadow-soft inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground hover:opacity-90"
-              >
-                <Sparkles className="h-3.5 w-3.5" /> Testar Pro
-              </Link>
-              <ModeToggle />
-            </>
-          )}
+          <Link
+            href="/#tool"
+            className="shadow-soft inline-flex items-center gap-1.5 rounded-lg bg-primary px-3 py-1.5 text-xs font-semibold text-primary-foreground hover:opacity-90"
+          >
+            <Sparkles className="h-3.5 w-3.5" /> Usar ferramenta
+          </Link>
+          <ModeToggle />
         </div>
       </div>
     </div>

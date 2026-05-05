@@ -35,11 +35,8 @@ export function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link
-                    href="/pricing"
-                    className="hover:text-sky-700 hover:underline underline-offset-2"
-                  >
-                    Precos
+                  <Link href="/about" className="hover:text-sky-700 hover:underline underline-offset-2">
+                    Sobre
                   </Link>
                 </li>
               </ul>
@@ -99,7 +96,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <span>© 2026 TextoTools — Todos os direitos reservados</span>
-          <span>Made for writers · designers · marketers</span>
+          <span>Monetizado com anuncios para manter uso gratuito</span>
         </div>
       </div>
     </footer>

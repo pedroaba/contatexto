@@ -5,7 +5,6 @@ import {
   LayoutGrid,
   ScanSearch,
   ShieldCheck,
-  WandSparkles,
 } from "lucide-react";
 
 const features = [
@@ -28,11 +27,6 @@ const features = [
     icon: ShieldCheck,
     title: "Privacidade no navegador",
     body: "A analise principal roda localmente, ideal para rascunhos, copys e textos profissionais.",
-  },
-  {
-    icon: WandSparkles,
-    title: "Camada Pro para aprofundar",
-    body: "Abra espaco para analises mais avancadas de clareza, tom e qualidade sem poluir o fluxo basico.",
   },
 ];
 

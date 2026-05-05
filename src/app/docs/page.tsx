@@ -26,13 +26,7 @@ const quickLinks = [
     href: "/#tool",
     title: "Abrir a ferramenta",
     description:
-      "Cole seu texto, veja a contagem em tempo real e use os painéis de qualidade, SEO e análise com IA.",
-  },
-  {
-    href: "/pricing",
-    title: "Ver planos",
-    description:
-      "Compare o plano gratuito com o Pro e entenda os limites de análises salvas e recursos avançados.",
+      "Cole seu texto, veja a contagem em tempo real e use os painéis de qualidade e SEO.",
   },
   {
     href: "/privacy",
@@ -113,9 +107,9 @@ const faqItems = [
       "Sim. Criadores de conteúdo, social media, redatores, copywriters e profissionais de marketing podem usar o TextoTools para melhorar posts, legendas, descrições, títulos, chamadas para ação e textos de campanhas.",
   },
   {
-    question: "Como escolho um plano?",
+    question: "A ferramenta e paga?",
     answer:
-      "A página de preços mostra os limites, recursos extras e o melhor encaixe para cada perfil. O Free cobre o essencial, enquanto o Pro oferece análises ilimitadas e recursos avançados.",
+      "Nao. O TextoTools e totalmente gratuito. A monetizacao acontece por blocos de anuncio na interface.",
   },
 ];
 
@@ -195,8 +189,7 @@ export default function DocsPage() {
                 palavras e legibilidade.
               </li>
               <li>
-                5. Se precisar salvar mais análises ou usar recursos avançados,
-                compare os planos Free e Pro.
+                5. Exporte seu texto e aplique os ajustes antes de publicar.
               </li>
             </ol>
           </article>

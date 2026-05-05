@@ -1,29 +1,6 @@
 declare namespace NodeJS {
   interface ProcessEnv {
-    FIREBASE_API_KEY?: string;
-    FIREBASE_APP_ID?: string;
-    FIREBASE_AUTH_DOMAIN?: string;
-    FIREBASE_AUTH_PROVIDER_X509_CERT_URL?: string;
-    FIREBASE_AUTH_URI?: string;
-    FIREBASE_CLIENT_EMAIL?: string;
-    FIREBASE_CLIENT_ID?: string;
-    FIREBASE_CLIENT_X509_CERT_URL?: string;
-    FIREBASE_MEASUREMENT_ID?: string;
-    FIREBASE_MESSAGING_SENDER_ID?: string;
-    GOOGLE_GENERATIVE_AI_API_KEY?: string;
-    FIREBASE_PRIVATE_KEY?: string;
-    FIREBASE_PRIVATE_KEY_ID?: string;
-    FIREBASE_PROJECT_ID?: string;
-    FIREBASE_SERVICE_ACCOUNT_JSON?: string;
-    FIREBASE_STORAGE_BUCKET?: string;
-    FIREBASE_TOKEN_URI?: string;
-    FIREBASE_UNIVERSE_DOMAIN?: string;
     NEXT_PUBLIC_APP_URL?: string;
-    PUBLIC_FIREBASE_API_KEY?: string;
-    STRIPE_PRICE_PRO_MONTHLY_ID?: string;
-    STRIPE_PRICE_PRO_YEARLY_ID?: string;
-    STRIPE_PRODUCT_PRO_ID?: string;
-    STRIPE_SECRET_KEY?: string;
-    STRIPE_WEBHOOK_SECRET?: string;
+    NEXT_PUBLIC_ADSENSE_CLIENT_ID?: string;
   }
 }

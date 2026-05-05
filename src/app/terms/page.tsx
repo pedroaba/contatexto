@@ -27,11 +27,11 @@ const sections = [
   },
   {
     title: "Disponibilidade e evolução do serviço",
-    body: "Podemos ajustar recursos, limites, planos, preços e interface ao longo do tempo para melhorar a experiência do usuário e a qualidade do produto. Também podemos corrigir, pausar ou remover funcionalidades quando isso for necessário por motivos de manutenção, segurança, desempenho ou direção do negócio.",
+    body: "Podemos ajustar recursos, limites e interface ao longo do tempo para melhorar a experiência do usuário e a qualidade do produto. Também podemos corrigir, pausar ou remover funcionalidades quando isso for necessário por motivos de manutenção, segurança e desempenho.",
   },
   {
-    title: "Planos, recursos premium e cobrança",
-    body: "Recursos premium podem estar sujeitos a limites de uso, preços, condições comerciais e regras específicas apresentadas na página de pricing. O acesso a funcionalidades pagas depende do plano contratado, da disponibilidade do recurso e da manutenção regular da conta, quando aplicável.",
+    title: "Monetizacao por anuncios",
+    body: "O serviço e gratuito para todos os usuarios. Para manter a operacao, exibimos espacos publicitarios na interface.",
   },
   {
     title: "Resultados gerados pela ferramenta",
@@ -47,7 +47,7 @@ const sections = [
   },
   {
     title: "Atualizações destes termos",
-    body: "Estes Termos de Uso podem ser atualizados conforme o TextoTools evolui. Quando isso acontecer, a versão publicada nesta página passará a refletir as regras vigentes para uso da plataforma, incluindo novas funcionalidades, ajustes de planos ou mudanças nas condições do serviço.",
+    body: "Estes Termos de Uso podem ser atualizados conforme o TextoTools evolui. Quando isso acontecer, a versão publicada nesta página passará a refletir as regras vigentes para uso da plataforma.",
   },
 ];
 
@@ -80,7 +80,7 @@ export default async function TermsPage() {
               Estes Termos de Uso explicam as condições gerais para utilizar o
               TextoTools, incluindo o contador de caracteres online, o contador
               de palavras, os recursos de análise de texto e as funcionalidades
-              premium. O objetivo é apresentar regras claras, sem juridiquês
+              gerais. O objetivo é apresentar regras claras, sem juridiquês
               desnecessário, para que você entenda suas responsabilidades e
               saiba como o serviço pode evoluir ao longo do tempo.
             </p>

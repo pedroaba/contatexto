@@ -5,7 +5,6 @@ export const llmsTxt = `# TextoTools
 ## Site
 - [Homepage](https://textotools.app/): Ferramenta principal para contador de caracteres online e analise de texto.
 - [Documentacao](https://textotools.app/docs): Guia de uso, dicas de SEO para textos e perguntas frequentes.
-- [Precos](https://textotools.app/pricing): Comparacao entre os planos Free e Pro.
 - [Sobre](https://textotools.app/about): Contexto do produto, proposta e posicionamento.
 - [Privacidade](https://textotools.app/privacy): Politica de privacidade e processamento local.
 - [Termos](https://textotools.app/terms): Regras gerais de uso da plataforma.

@@ -2,52 +2,38 @@ import test from "node:test";
 import assert from "node:assert/strict";
 
 async function loadEnvModule() {
-  process.env.FIREBASE_API_KEY = "runtime-api-key";
-  process.env.FIREBASE_CLIENT_EMAIL =
-    "firebase-adminsdk@test.iam.gserviceaccount.com";
-  process.env.FIREBASE_PRIVATE_KEY =
-    "-----BEGIN PRIVATE KEY-----\\nruntime\\n-----END PRIVATE KEY-----\\n";
-  process.env.FIREBASE_PROJECT_ID = "runtime-project";
+  process.env.NEXT_PUBLIC_APP_URL = "https://textotools.app";
+  process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID = "ca-pub-1234567890123456";
 
   return import("../../env.ts");
 }
 
-test("env schema accepts Firebase service account json as admin source", async () => {
+test("env schema accepts app URL and AdSense client ID", async () => {
   const { envSchema } = await loadEnvModule();
   const parsed = envSchema.parse({
-    FIREBASE_API_KEY: "api-key",
-    FIREBASE_SERVICE_ACCOUNT_JSON: JSON.stringify({
-      client_email: "firebase-adminsdk@test.iam.gserviceaccount.com",
-      private_key: "-----BEGIN PRIVATE KEY-----\\nabc\\n-----END PRIVATE KEY-----\\n",
-      project_id: "texttools-test",
-    }),
+    NEXT_PUBLIC_APP_URL: "https://textotools.app",
+    NEXT_PUBLIC_ADSENSE_CLIENT_ID: "ca-pub-1111111111111111",
   });
 
-  assert.equal(parsed.FIREBASE_API_KEY, "api-key");
-  assert.equal(typeof parsed.FIREBASE_SERVICE_ACCOUNT_JSON, "string");
+  assert.equal(parsed.NEXT_PUBLIC_APP_URL, "https://textotools.app");
+  assert.equal(parsed.NEXT_PUBLIC_ADSENSE_CLIENT_ID, "ca-pub-1111111111111111");
 });
 
-test("env schema accepts discrete Firebase admin credentials", async () => {
+test("env schema accepts optional empty config", async () => {
   const { envSchema } = await loadEnvModule();
-  const parsed = envSchema.parse({
-    FIREBASE_API_KEY: "api-key",
-    FIREBASE_CLIENT_EMAIL: "firebase-adminsdk@test.iam.gserviceaccount.com",
-    FIREBASE_PRIVATE_KEY:
-      "-----BEGIN PRIVATE KEY-----\\nabc\\n-----END PRIVATE KEY-----\\n",
-    FIREBASE_PROJECT_ID: "texttools-test",
-  });
+  const parsed = envSchema.parse({});
 
-  assert.equal(parsed.FIREBASE_PROJECT_ID, "texttools-test");
+  assert.equal(parsed.NEXT_PUBLIC_APP_URL, undefined);
 });
 
-test("env schema rejects config without admin credentials", async () => {
+test("env schema rejects invalid app URL type", async () => {
   const { envSchema } = await loadEnvModule();
 
   assert.throws(
     () =>
       envSchema.parse({
-        FIREBASE_API_KEY: "api-key",
+        NEXT_PUBLIC_APP_URL: 42 as unknown as string,
       }),
-    /FIREBASE_SERVICE_ACCOUNT_JSON/,
+    /string/,
   );
 });

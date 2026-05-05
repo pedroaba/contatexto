@@ -24,7 +24,7 @@ const docHighlights = [
     href: "/docs#faq",
     eyebrow: "04",
     title: "Perguntas frequentes",
-    body: "Encontre respostas rapidas sobre processamento local, uso sem conta e escolha entre Free e Pro.",
+    body: "Encontre respostas rapidas sobre processamento local, uso sem conta e boas praticas de escrita.",
   },
 ];
 
