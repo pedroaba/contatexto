@@ -1,8 +1,8 @@
 # ContaTexto
 
 Contador de texto moderno para analisar **caracteres, palavras, frases,
-paragrafos** e **tempo estimado de leitura** com foco em produtividade,
-conteudo e SEO.
+parágrafos** e **tempo estimado de leitura** com foco em produtividade,
+conteúdo e SEO.
 
 ## Preview
 
@@ -13,11 +13,11 @@ conteudo e SEO.
 
 ## Recursos
 
-- Contagem instantanea de caracteres e palavras.
-- Analise de frases, paragrafos e estimativa de leitura.
+- Contagem instantânea de caracteres e palavras.
+- Análise de frases, parágrafos e estimativa de leitura.
 - Interface limpa e responsiva para desktop e mobile.
-- Paginas institucionais prontas para SEO.
-- Estrutura preparada para monetizacao com Google AdSense.
+- Páginas institucionais prontas para SEO.
+- Estrutura preparada para validação com Google AdSense.
 
 ## Stack
 
@@ -27,14 +27,14 @@ conteudo e SEO.
 - `Tailwind CSS 4`
 - `pnpm`
 
-## Comecando
+## Começando
 
-### Pre-requisitos
+### Pré-requisitos
 
 - `Node.js` >= `22.12.0`
 - `pnpm` instalado globalmente
 
-### Instalacao
+### Instalação
 
 ```bash
 pnpm install
@@ -46,18 +46,18 @@ pnpm install
 pnpm dev
 ```
 
-Aplicacao disponivel em `http://localhost:3000`.
+Aplicação disponível em `http://localhost:3000`.
 
 ## Scripts
 
-| Comando | Descricao |
+| Comando | Descrição |
 | :-- | :-- |
 | `pnpm dev` | inicia o ambiente local |
 | `pnpm test` | executa os testes |
-| `pnpm build` | gera o build de producao |
-| `pnpm start` | inicia o servidor de producao |
+| `pnpm build` | gera o build de produção |
+| `pnpm start` | inicia o servidor de produção |
 
-## Variaveis de ambiente
+## Variáveis de ambiente
 
 Crie um arquivo `.env` na raiz com:
 
@@ -75,9 +75,9 @@ pnpm build
 pnpm start
 ```
 
-Para deploy em producao, conecte o repositorio na plataforma e configure as
-variaveis de ambiente.
+Para deploy em produção, conecte o repositório na plataforma e configure as
+variáveis de ambiente.
 
-## Licenca
+## Licença
 
-Distribuido sob a licenca MIT. Veja o arquivo `LICENSE` para mais detalhes.
+Distribuído sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.

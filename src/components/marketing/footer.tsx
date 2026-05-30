@@ -13,12 +13,12 @@ export function Footer() {
               <span className="font-semibold tracking-tight">ContaTexto</span>
             </div>
             <p className="mt-3 max-w-sm text-sm text-muted-foreground">
-              Suite de ferramentas de texto rapidas, privadas e profissionais. Tudo
+              Suíte de ferramentas de texto rápidas, privadas e profissionais. Tudo
               roda local, no seu navegador.
             </p>
             <div className="mt-4 inline-flex items-center gap-2 rounded-full border border-border bg-muted/40 px-3 py-1 text-[11px]">
               <ShieldCheck className="h-3 w-3 text-success" />
-              Privacy-first · Sem rastreio
+              Privacidade e transparência
             </div>
           </div>
 
@@ -49,15 +49,31 @@ export function Footer() {
                     href="/docs"
                     className="hover:text-sky-700 hover:underline underline-offset-2"
                   >
-                    Documentacao
+                    Documentação
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="/docs#seo-guide"
+                    href="/contador-de-caracteres"
                     className="hover:text-sky-700 hover:underline underline-offset-2"
                   >
-                    Guia SEO
+                    Caracteres
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/meta-title-meta-description"
+                    className="hover:text-sky-700 hover:underline underline-offset-2"
+                  >
+                    SEO
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/revisao-de-textos"
+                    className="hover:text-sky-700 hover:underline underline-offset-2"
+                  >
+                    Revisão
                   </Link>
                 </li>
               </ul>
@@ -96,7 +112,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center">
           <span>© 2026 ContaTexto — Todos os direitos reservados</span>
-          <span>Monetizado com anuncios para manter uso gratuito</span>
+          <span>Ferramenta gratuita com foco em privacidade</span>
         </div>
       </div>
     </footer>

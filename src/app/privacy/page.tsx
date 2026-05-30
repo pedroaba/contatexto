@@ -5,21 +5,21 @@ import { buildMetadata, buildWebPageSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/privacy",
-  title: "Politica de Privacidade",
+  title: "Política de Privacidade",
   description:
-    "Entenda como o ContaTexto trata dados, prioriza processamento local no navegador e reduz coleta desnecessaria de informacoes.",
+    "Entenda como o ContaTexto trata dados, prioriza processamento local no navegador e reduz coleta desnecessária de informações.",
   keywords: [
     "privacidade contatexto",
     "contador de caracteres privado",
     "processamento local",
-    "politica de privacidade",
+    "política de privacidade",
   ],
 });
 
 const principles = [
   "O ContaTexto foi criado para priorizar o processamento local no navegador sempre que isso fizer sentido para a funcionalidade utilizada.",
   "Nosso objetivo é reduzir a coleta desnecessária de dados e manter uma experiência simples, rápida, privada e transparente.",
-  "Nao usamos login, assinatura ou dashboard. O produto e gratuito e focado em uso direto na pagina.",
+  "Não usamos login, assinatura ou dashboard. O produto é gratuito e focado em uso direto na página.",
 ];
 
 const sections = [
@@ -30,6 +30,14 @@ const sections = [
   {
     title: "Quais dados podemos coletar",
     body: "Podemos coletar dados técnicos básicos para manter a plataforma funcionando corretamente, como informações de acesso, diagnóstico, preferências de uso e métricas essenciais de funcionamento.",
+  },
+  {
+    title: "Publicidade, cookies e tecnologias do Google",
+    body: "O ContaTexto pode usar produtos e serviços do Google, incluindo Google AdSense, para validar o site, exibir publicidade e manter a ferramenta gratuita. Esses serviços podem usar cookies, beacons da Web, endereços IP, identificadores de dispositivo e outros identificadores para operar anúncios, medir desempenho, prevenir fraudes, limitar abuso e cumprir requisitos técnicos e legais.",
+  },
+  {
+    title: "Anúncios personalizados e não personalizados",
+    body: "Quando anúncios estiverem ativos, o Google e seus parceiros podem usar dados para exibir anúncios personalizados ou não personalizados, conforme as configurações do usuário, a região de acesso, o consentimento aplicável e as políticas do Google. O usuário pode gerenciar preferências de anúncios e privacidade diretamente nas ferramentas disponibilizadas pelo Google.",
   },
   {
     title: "O que evitamos coletar",
@@ -51,9 +59,9 @@ export default async function PrivacyPage() {
       <StructuredData
         data={buildWebPageSchema({
           path: "/privacy",
-          title: "Politica de Privacidade do ContaTexto",
+          title: "Política de Privacidade do ContaTexto",
           description:
-            "Entenda como o ContaTexto trata dados, prioriza processamento local no navegador e reduz coleta desnecessaria de informacoes.",
+            "Entenda como o ContaTexto trata dados, prioriza processamento local no navegador e reduz coleta desnecessária de informações.",
         })}
       />
 

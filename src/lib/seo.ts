@@ -99,7 +99,7 @@ export function buildSeo(input: SeoInput): SeoConfig {
   const resolvedTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
   const imageAlt =
     input.imageAlt ??
-    `${SITE_NAME}: contador de caracteres, palavras e analise de texto`;
+    `${SITE_NAME}: contador de caracteres, palavras e análise de texto`;
 
   return {
     title,
@@ -281,7 +281,7 @@ export function buildSoftwareApplicationSchema(): JsonLdNode {
     url: `${SITE_URL}/`,
     inLanguage: DEFAULT_LANGUAGE,
     description:
-      "Ferramenta online para contar caracteres, palavras, frases, paragrafos e revisar textos com foco em clareza, SEO e produtividade.",
+      "Ferramenta online para contar caracteres, palavras, frases, parágrafos e revisar textos com foco em clareza, SEO e produtividade.",
     offers: [
       {
         "@type": "Offer",

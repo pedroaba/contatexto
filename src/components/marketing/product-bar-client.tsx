@@ -8,9 +8,19 @@ import { Sparkles } from "lucide-react";
 import { ModeToggle } from "@/components/toggle-mode";
 import { cn } from "@/lib/utils";
 
+const guidePaths = [
+  "/contador-de-caracteres",
+  "/contador-de-palavras",
+  "/meta-title-meta-description",
+  "/tempo-de-leitura",
+  "/legendas-redes-sociais",
+  "/revisao-de-textos",
+];
+
 const navItems = [
   { href: "/#tool", label: "Ferramenta", match: "/" },
-  { href: "/docs", label: "Documentacao", match: "/docs" },
+  { href: "/docs", label: "Documentação", match: "/docs" },
+  { href: "/docs#guias", label: "Guias", match: "guides" },
   { href: "/about", label: "Sobre", match: "/about" },
 ];
 
@@ -33,6 +43,8 @@ export function ProductBarClient() {
             const isActive =
               item.match === "/"
                 ? pathname === "/"
+                : item.match === "guides"
+                  ? guidePaths.includes(pathname)
                 : pathname.startsWith(item.match);
 
             return (

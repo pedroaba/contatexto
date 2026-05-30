@@ -7,7 +7,7 @@ export const metadata = buildMetadata({
   path: "/terms",
   title: "Termos de Uso",
   description:
-    "Leia os Termos de Uso do ContaTexto para entender regras, limites, responsabilidades e condicoes gerais da plataforma.",
+    "Leia os Termos de Uso do ContaTexto para entender regras, limites, responsabilidades e condições gerais da plataforma.",
   keywords: [
     "termos de uso contatexto",
     "contador de caracteres",
@@ -30,8 +30,8 @@ const sections = [
     body: "Podemos ajustar recursos, limites e interface ao longo do tempo para melhorar a experiência do usuário e a qualidade do produto. Também podemos corrigir, pausar ou remover funcionalidades quando isso for necessário por motivos de manutenção, segurança e desempenho.",
   },
   {
-    title: "Monetizacao por anuncios",
-    body: "O serviço e gratuito para todos os usuarios. Para manter a operacao, exibimos espacos publicitarios na interface.",
+    title: "Monetização por anúncios",
+    body: "O serviço é gratuito para todos os usuários. Para manter a operação, o ContaTexto pode usar publicidade, sempre respeitando a experiência de leitura, as páginas legais e as políticas aplicáveis.",
   },
   {
     title: "Resultados gerados pela ferramenta",
@@ -59,7 +59,7 @@ export default async function TermsPage() {
           path: "/terms",
           title: "Termos de Uso do ContaTexto",
           description:
-            "Leia os Termos de Uso do ContaTexto para entender regras, limites, responsabilidades e condicoes gerais da plataforma.",
+            "Leia os Termos de Uso do ContaTexto para entender regras, limites, responsabilidades e condições gerais da plataforma.",
         })}
       />
       <ProductBar />

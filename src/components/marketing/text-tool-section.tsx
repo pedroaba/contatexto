@@ -21,7 +21,6 @@ import {
 } from "lucide-react";
 import { toast } from "sonner";
 
-import { AdSlot } from "@/components/marketing/ad-slot";
 import { DEFAULT_TEXT } from "@/lib/default-text";
 import { cn } from "@/lib/utils";
 import { CounterService } from "@/services/counter.service";
@@ -99,15 +98,15 @@ export function TextToolSection() {
     const platformLimits = analysis.platformLimits;
 
     const report = [
-      "=== ContaTexto - Exportacao ===",
+      "=== ContaTexto - Exportação ===",
       `Gerado em: ${exportedAt}`,
       "",
-      "Resumo rapido:",
+      "Resumo rápido:",
       `- Caracteres: ${summary.characters}`,
       `- Palavras: ${summary.words}`,
       `- Frases: ${summary.sentences}`,
       "",
-      "Metricas calculadas:",
+      "Métricas calculadas:",
       ...metrics.map((metric) => `- ${metric.label}: ${metric.value}`),
       "",
       "Qualidade do texto:",
@@ -153,7 +152,7 @@ export function TextToolSection() {
       ["resumo", "caracteres", summary.characters, ""],
       ["resumo", "palavras", summary.words, ""],
       ["resumo", "frases", summary.sentences, ""],
-      ...metrics.map((metric) => ["metrica", metric.label, metric.value, metric.hint]),
+      ...metrics.map((metric) => ["métrica", metric.label, metric.value, metric.hint]),
       [
         "qualidade",
         "legibilidade",
@@ -227,11 +226,11 @@ export function TextToolSection() {
     doc.text("ContaTexto", margin, 48);
     doc.setFont("helvetica", "normal");
     doc.setFontSize(12);
-    doc.text("Relatorio de metricas e qualidade", margin, 68);
+    doc.text("Relatório de métricas e qualidade", margin, 68);
     doc.setFontSize(10);
     doc.text(`Gerado em ${exportedAt}`, margin, 86);
 
-    drawSectionTitle("Resumo rapido");
+    drawSectionTitle("Resumo rápido");
     doc.setFillColor(255, 255, 255);
     doc.setDrawColor(226, 232, 240);
     const cardWidth = (pageWidth - margin * 2 - 16) / 3;
@@ -257,7 +256,7 @@ export function TextToolSection() {
     });
     y += 78;
 
-    drawSectionTitle("Metricas calculadas");
+    drawSectionTitle("Métricas calculadas");
     drawList(metrics.map((metric) => `${metric.label}: ${metric.value} (${metric.hint})`));
 
     drawSectionTitle("Qualidade do texto");
@@ -290,13 +289,9 @@ export function TextToolSection() {
 
   return (
     <>
-      <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-        <AdSlot size="leaderboard" />
-      </div>
-
       <section
         id="tool"
-        className={cn("mx-auto max-w-7xl px-4 pb-12 md:px-8")}
+        className={cn("mx-auto max-w-7xl px-4 py-12 md:px-8")}
       >
         <div className="grid gap-6 lg:grid-cols-12">
           <div className="lg:col-span-8">
@@ -478,7 +473,6 @@ export function TextToolSection() {
               </div>
             </div>
 
-            <AdSlot size="rectangle" />
           </aside>
         </div>
 
@@ -508,9 +502,6 @@ export function TextToolSection() {
           })}
         </div>
 
-        <div className="pt-6">
-          <AdSlot size="inline" className="mx-auto max-w-3xl" />
-        </div>
       </section>
     </>
   );

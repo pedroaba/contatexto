@@ -42,13 +42,13 @@ export const homeFaqItems: FaqItem[] = [
       "Sim. A contagem principal acontece diretamente no navegador, ajudando a manter seus textos privados durante o uso da ferramenta. Isso é útil para revisar rascunhos, ideias, descrições, conteúdos de marketing, textos profissionais e materiais que você não quer expor publicamente.",
   },
   {
-    question: "A ferramenta e gratuita?",
+    question: "A ferramenta é gratuita?",
     answer:
-      "Sim. O ContaTexto e totalmente gratuito para uso. A monetizacao ocorre com blocos de anuncios na pagina.",
+      "Sim. O ContaTexto é totalmente gratuito para uso. A plataforma pode usar publicidade para manter o acesso aberto, sempre com foco em uma experiência simples e transparente.",
   },
   {
     question: "Preciso de conta para usar?",
     answer:
-      "Nao. Voce pode usar a ferramenta direto no navegador sem criar conta.",
+      "Não. Você pode usar a ferramenta direto no navegador sem criar conta.",
   },
 ];

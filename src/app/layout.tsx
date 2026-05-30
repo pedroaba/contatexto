@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template: `%s | ${seoSite.name}`,
   },
   description:
-    "Ferramenta online para contar caracteres, palavras, frases, paragrafos e revisar textos com foco em clareza, SEO e produtividade.",
+    "Ferramenta online para contar caracteres, palavras, frases, parágrafos e revisar textos com foco em clareza, SEO e produtividade.",
 };
 
 export default async function RootLayout({
@@ -31,7 +31,7 @@ export default async function RootLayout({
   const adsenseClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
 
   return (
-    <html lang="pt-BR" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning data-scroll-behavior="smooth">
       <head />
       <body className="bg-background">
         {adsenseClient ? (

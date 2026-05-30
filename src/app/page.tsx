@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, Lock, ShieldCheck, Zap } from "lucide-react";
 
-import { AdSlot } from "@/components/marketing/ad-slot";
 import { DocumentationSection } from "@/components/marketing/documentation-section";
 import { FaqSection } from "@/components/marketing/faq-section";
 import { Features } from "@/components/marketing/features";
@@ -22,14 +21,14 @@ export const metadata = buildMetadata({
   path: "/",
   title: seoSite.name,
   description:
-    "Contador de caracteres online para contar palavras, frases, paragrafos e tempo de leitura. Revise meta title, meta description e textos com foco em SEO, clareza e produtividade.",
+    "Contador de caracteres online para contar palavras, frases, parágrafos e tempo de leitura. Revise meta title, meta description e textos com foco em SEO, clareza e produtividade.",
   keywords: [
     "contador de caracteres",
     "contador de palavras",
     "meta title",
     "meta description",
     "seo",
-    "analise de texto",
+    "análise de texto",
   ],
 });
 
@@ -42,7 +41,7 @@ export default function HomePage() {
             path: "/",
             title: "Contador de caracteres online",
             description:
-              "Conte caracteres, palavras e otimize conteudos para SEO com o ContaTexto.",
+              "Conte caracteres, palavras e otimize conteúdos para SEO com o ContaTexto.",
           }),
           buildFaqSchema(homeFaqItems),
         ]}
@@ -59,7 +58,7 @@ export default function HomePage() {
                 <span>Contador de caracteres online</span>
                 <span className="text-border">·</span>
                 <span className="text-muted-foreground">
-                  rapido, gratuito e privado
+                  rápido, gratuito e privado
                 </span>
               </span>
 
@@ -67,14 +66,14 @@ export default function HomePage() {
                 Contador de caracteres
                 <br />
                 <span className="bg-linear-to-r from-sky-600 to-sky-400 bg-clip-text text-transparent dark:from-sky-300 dark:to-sky-500">
-                  com analise de texto.
+                  com análise de texto.
                 </span>
               </h1>
 
               <p className="mt-6 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
-                Conte caracteres, palavras, frases, paragrafos e tempo de
+                Conte caracteres, palavras, frases, parágrafos e tempo de
                 leitura em tempo real. Ideal para SEO, meta title, meta
-                description, redes sociais, anuncios e conteudos digitais.
+                description, redes sociais, anúncios e conteúdos digitais.
               </p>
 
               <div className="mt-8 flex flex-wrap gap-3">
@@ -82,14 +81,14 @@ export default function HomePage() {
                   href="/#tool"
                   className="shadow-glow group inline-flex items-center gap-2 rounded-lg bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all hover:translate-y-[-1px]"
                 >
-                  Usar contador gratis
+                  Usar contador grátis
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
                 </Link>
                 <Link
                   href="/docs"
                   className="inline-flex items-center gap-2 rounded-lg border border-border bg-card px-5 py-3 text-sm font-semibold transition-colors hover:bg-accent"
                 >
-                  Ver guia rapido
+                  Ver guia rápido
                 </Link>
               </div>
 
@@ -114,17 +113,8 @@ export default function HomePage() {
 
       <TextToolSection />
       <Features />
-      <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-        <AdSlot size="leaderboard" />
-      </div>
       <DocumentationSection />
-      <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-        <AdSlot size="inline" className="mx-auto max-w-3xl" />
-      </div>
       <FaqSection />
-      <div className="mx-auto max-w-7xl px-4 pb-6 md:px-8">
-        <AdSlot size="leaderboard" />
-      </div>
 
       <Footer />
     </>

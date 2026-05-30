@@ -9,9 +9,9 @@ import {
 
 const metrics = [
   { icon: Type, label: "Caracteres", value: "263" },
-  { icon: Hash, label: "Sem espacos", value: "224" },
+  { icon: Hash, label: "Sem espaços", value: "224" },
   { icon: AlignLeft, label: "Palavras", value: "42" },
-  { icon: Layers, label: "Unicas", value: "37" },
+  { icon: Layers, label: "Únicas", value: "37" },
   { icon: Activity, label: "Frases", value: "5" },
   { icon: Clock, label: "Leitura", value: "13s" },
 ];

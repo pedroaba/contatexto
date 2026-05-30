@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { BadgeCheck, Lock, Rocket, ShieldCheck, Sparkles } from "lucide-react";
 
-import { AdSlot } from "@/components/marketing/ad-slot";
 import { Footer } from "@/components/marketing/footer";
 import { ProductBar } from "@/components/marketing/product-bar";
 import { StructuredData } from "@/components/structured-data";
@@ -11,13 +10,13 @@ export const metadata = buildMetadata({
   path: "/about",
   title: "Sobre",
   description:
-    "Conheca o ContaTexto, plataforma para contar caracteres, revisar textos e otimizar conteudos com foco em privacidade, clareza e SEO.",
+    "Conheça o ContaTexto, plataforma para contar caracteres, revisar textos e otimizar conteúdos com foco em privacidade, clareza e SEO.",
   keywords: [
     "sobre contatexto",
     "contador de caracteres online",
     "ferramentas de texto",
     "seo",
-    "revisao de texto",
+    "revisão de texto",
   ],
 });
 
@@ -36,9 +35,9 @@ const values = [
   },
   {
     icon: ShieldCheck,
-    title: "Monetizacao com anuncios",
+    title: "Acesso gratuito",
     description:
-      "Mantemos uso gratuito com espacos de publicidade, sem planos pagos e sem assinatura.",
+      "Mantemos a ferramenta gratuita, sem planos pagos, assinatura, dashboard ou login obrigatório.",
   },
 ];
 
@@ -58,7 +57,7 @@ export default function AboutPage() {
           path: "/about",
           title: "Sobre o ContaTexto",
           description:
-            "Conheca o ContaTexto, plataforma para contar caracteres, revisar textos e otimizar conteudos com foco em privacidade, clareza e SEO.",
+            "Conheça o ContaTexto, plataforma para contar caracteres, revisar textos e otimizar conteúdos com foco em privacidade, clareza e SEO.",
         })}
       />
       <ProductBar />
@@ -92,7 +91,7 @@ export default function AboutPage() {
                 <div className="rounded-[1.8rem] border border-border bg-card p-7">
                   <h2 className="text-2xl font-bold tracking-tight">Modelo do produto</h2>
                   <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    O ContaTexto agora e uma ferramenta 100% gratuita. Nao existe
+                    O ContaTexto agora é uma ferramenta 100% gratuita. Não existe
                     assinatura, dashboard ou login.
                   </p>
                 </div>
@@ -100,10 +99,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
-        <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-          <AdSlot size="leaderboard" />
-        </div>
 
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-7xl px-4 py-20 md:px-8">
@@ -156,10 +151,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-          <AdSlot size="leaderboard" />
-        </div>
-
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-7xl px-4 py-20 md:px-8">
             <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
@@ -171,8 +162,8 @@ export default function AboutPage() {
                 <h2 className="mt-3 text-4xl font-bold tracking-tight">Recursos principais</h2>
 
                 <p className="mt-4 text-base leading-relaxed text-muted-foreground">
-                  O ContaTexto combina metricas objetivas para ajudar voce a tomar
-                  melhores decisoes antes de publicar um conteudo.
+                  O ContaTexto combina métricas objetivas para ajudar você a tomar
+                  melhores decisões antes de publicar um conteúdo.
                 </p>
               </div>
 
@@ -192,10 +183,6 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
-
-        <div className="mx-auto max-w-7xl px-4 py-6 md:px-8">
-          <AdSlot size="inline" className="mx-auto max-w-3xl" />
-        </div>
 
         <section className="bg-background">
           <div className="mx-auto max-w-7xl px-4 py-20 md:px-8">
@@ -220,7 +207,7 @@ export default function AboutPage() {
                 </div>
 
                 <div className="lg:col-span-4">
-                  <Link href="/#tool" className="shadow-glow inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all hover:translate-y-[-1px] sm:w-auto lg:w-full">Abrir ferramenta gratis</Link>
+                  <Link href="/#tool" className="shadow-glow inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-all hover:translate-y-[-1px] sm:w-auto lg:w-full">Abrir ferramenta grátis</Link>
                 </div>
               </div>
             </div>

@@ -11,12 +11,12 @@ const features = [
   {
     icon: Gauge,
     title: "Contagem em tempo real",
-    body: "Caracteres, palavras, frases, linhas e tempo de leitura atualizados enquanto voce escreve.",
+    body: "Caracteres, palavras, frases, linhas e tempo de leitura atualizados enquanto você escreve.",
   },
   {
     icon: LayoutGrid,
-    title: "Metricas que ajudam a revisar",
-    body: "Veja diversidade de palavras, media por frase e outros sinais uteis para lapidar o texto.",
+    title: "Métricas que ajudam a revisar",
+    body: "Veja diversidade de palavras, média por frase e outros sinais úteis para lapidar o texto.",
   },
   {
     icon: ScanSearch,
@@ -26,7 +26,7 @@ const features = [
   {
     icon: ShieldCheck,
     title: "Privacidade no navegador",
-    body: "A analise principal roda localmente, ideal para rascunhos, copys e textos profissionais.",
+    body: "A análise principal roda localmente, ideal para rascunhos, copys e textos profissionais.",
   },
 ];
 
@@ -43,11 +43,11 @@ export function Features() {
               Recursos
             </span>
             <h2 className="mt-3 max-w-3xl text-4xl font-bold tracking-tight md:text-5xl">
-              Tudo o que voce precisa para ajustar textos com mais rapidez.
+              Tudo o que você precisa para ajustar textos com mais rapidez.
             </h2>
             <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted-foreground md:text-lg">
               O ContaTexto combina contagem precisa, contexto de plataforma e sinais
-              de qualidade em uma interface simples. A ideia e reduzir revisao
+              de qualidade em uma interface simples. A ideia é reduzir a revisão
               manual e deixar o texto pronto mais cedo.
             </p>
           </div>

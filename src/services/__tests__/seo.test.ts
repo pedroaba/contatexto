@@ -36,7 +36,7 @@ test("getOgImagePath maps the homepage and internal pages to stable assets", () 
 test("buildSeo creates canonical, robots and social image metadata", () => {
   const seo = buildSeo({
     path: "/docs",
-    title: "Documentacao",
+    title: "Documentação",
     description: "Guia completo para revisar e otimizar textos.",
   });
 

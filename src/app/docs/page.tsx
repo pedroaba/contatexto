@@ -1,18 +1,18 @@
 import Link from "next/link";
 
-import { AdSlot } from "@/components/marketing/ad-slot";
 import { Footer } from "@/components/marketing/footer";
 import { ProductBar } from "@/components/marketing/product-bar";
 import { StructuredData } from "@/components/structured-data";
+import { editorialGuideList } from "@/lib/editorial-guides";
 import { buildFaqSchema, buildMetadata, buildWebPageSchema } from "@/lib/seo";
 
 export const metadata = buildMetadata({
   path: "/docs",
-  title: "Documentacao",
+  title: "Documentação",
   description:
-    "Guia do ContaTexto para contar caracteres, revisar textos, ajustar meta title, meta description e melhorar conteudos para SEO e redes sociais.",
+    "Guia do ContaTexto para contar caracteres, revisar textos, ajustar meta title, meta description e melhorar conteúdos para SEO e redes sociais.",
   keywords: [
-    "documentacao contatexto",
+    "documentação contatexto",
     "contador de caracteres",
     "meta title",
     "meta description",
@@ -27,6 +27,12 @@ const quickLinks = [
     title: "Abrir a ferramenta",
     description:
       "Cole seu texto, veja a contagem em tempo real e use os painéis de qualidade e SEO.",
+  },
+  {
+    href: "/docs#guias",
+    title: "Guias editoriais",
+    description:
+      "Acesse conteúdos completos sobre caracteres, palavras, SEO, redes sociais e revisão.",
   },
   {
     href: "/privacy",
@@ -107,9 +113,9 @@ const faqItems = [
       "Sim. Criadores de conteúdo, social media, redatores, copywriters e profissionais de marketing podem usar o ContaTexto para melhorar posts, legendas, descrições, títulos, chamadas para ação e textos de campanhas.",
   },
   {
-    question: "A ferramenta e paga?",
+    question: "A ferramenta é paga?",
     answer:
-      "Nao. O ContaTexto e totalmente gratuito. A monetizacao acontece por blocos de anuncio na interface.",
+      "Não. O ContaTexto é totalmente gratuito. A plataforma pode usar publicidade para manter o acesso aberto.",
   },
 ];
 
@@ -120,9 +126,9 @@ export default function DocsPage() {
         data={[
           buildWebPageSchema({
             path: "/docs",
-            title: "Documentacao do ContaTexto",
+            title: "Documentação do ContaTexto",
             description:
-              "Guia do ContaTexto para contar caracteres, revisar textos, ajustar meta title, meta description e melhorar conteudos para SEO e redes sociais.",
+              "Guia do ContaTexto para contar caracteres, revisar textos, ajustar meta title, meta description e melhorar conteúdos para SEO e redes sociais.",
           }),
           buildFaqSchema(faqItems),
         ]}
@@ -165,7 +171,45 @@ export default function DocsPage() {
           ))}
         </section>
 
-        <AdSlot size="leaderboard" className="mt-8" />
+        <section
+          id="guias"
+          className="mt-8 scroll-mt-24 rounded-3xl border border-border bg-background p-6 md:p-8"
+        >
+          <div className="max-w-3xl">
+            <span className="text-xs font-semibold uppercase tracking-widest text-primary">
+              Guias editoriais
+            </span>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+              Conteúdos completos para revisar e publicar textos melhores
+            </h2>
+            <p className="mt-4 text-sm leading-6 text-muted-foreground md:text-base">
+              Estes guias foram criados para complementar a ferramenta com
+              explicações, exemplos e checklists. Cada página aborda uma intenção
+              de busca diferente e ajuda você a tomar decisões práticas antes de
+              publicar.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-4 md:grid-cols-2">
+            {editorialGuideList.map((guide) => (
+              <Link
+                key={guide.slug}
+                href={guide.path}
+                className="rounded-2xl border border-border bg-card p-5 transition hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-sm"
+              >
+                <div className="text-xs font-semibold uppercase tracking-widest text-primary">
+                  {guide.eyebrow}
+                </div>
+                <h3 className="mt-3 text-lg font-semibold tracking-tight">
+                  {guide.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted-foreground">
+                  {guide.description}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
 
         <section className="mt-8 grid gap-6 md:grid-cols-[1.2fr_0.8fr]">
           <article
@@ -208,8 +252,6 @@ export default function DocsPage() {
             </p>
           </article>
         </section>
-
-        <AdSlot size="inline" className="mx-auto mt-8 max-w-3xl" />
 
         <section
           id="seo-guide"
@@ -310,8 +352,6 @@ export default function DocsPage() {
             </ul>
           </article>
         </section>
-
-        <AdSlot size="leaderboard" className="mt-8" />
 
         <section
           id="use-cases"

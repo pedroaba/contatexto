@@ -8,44 +8,27 @@ const projectRoot = resolve(import.meta.dirname, "../../..");
 const readSource = (relativePath: string) =>
   readFileSync(resolve(projectRoot, relativePath), "utf8");
 
-test("editorial and commercial pages include ad slots", () => {
-  const pagesWithAds = {
-    "src/app/about/page.tsx": 3,
-    "src/app/docs/page.tsx": 3,
-  };
+test("public pages render without AdSlot inventory while awaiting review", () => {
+  const publicSources = [
+    "src/app/page.tsx",
+    "src/app/about/page.tsx",
+    "src/app/docs/page.tsx",
+    "src/app/privacy/page.tsx",
+    "src/app/terms/page.tsx",
+    "src/app/contador-de-caracteres/page.tsx",
+    "src/app/contador-de-palavras/page.tsx",
+    "src/app/meta-title-meta-description/page.tsx",
+    "src/app/tempo-de-leitura/page.tsx",
+    "src/app/legendas-redes-sociais/page.tsx",
+    "src/app/revisao-de-textos/page.tsx",
+    "src/components/marketing/text-tool-section.tsx",
+    "src/components/marketing/editorial-guide-page.tsx",
+  ];
 
-  Object.entries(pagesWithAds).forEach(([pagePath, minimumSlots]) => {
-    const source = readSource(pagePath);
-    const slotCount = [...source.matchAll(/<AdSlot\b/g)].length;
-
-    assert.match(source, /import\s+\{\s*AdSlot\s*\}\s+from ["']@\/components\/marketing\/ad-slot["'];/);
-    assert.ok(
-      slotCount >= minimumSlots,
-      `${pagePath} should contain at least ${minimumSlots} ad slots, found ${slotCount}`,
-    );
-  });
-});
-
-test("home composition includes expanded ad inventory", () => {
-  const toolSectionSource = readSource("src/components/marketing/text-tool-section.tsx");
-  const staticSectionsSource = readSource("src/app/page.tsx");
-  const homeSlotCount =
-    [...toolSectionSource.matchAll(/<AdSlot\b/g)].length +
-    [...staticSectionsSource.matchAll(/<AdSlot\b/g)].length;
-
-  assert.ok(
-    homeSlotCount >= 4,
-    `home should contain at least 4 ad inventory markers across its sections, found ${homeSlotCount}`,
-  );
-});
-
-test("legal pages remain without ad slots", () => {
-  const legalPages = ["src/app/privacy/page.tsx", "src/app/terms/page.tsx"];
-
-  legalPages.forEach((pagePath) => {
+  publicSources.forEach((pagePath) => {
     const source = readSource(pagePath);
 
     assert.doesNotMatch(source, /import\s+\{\s*AdSlot/);
-    assert.doesNotMatch(source, /<AdSlot /);
+    assert.doesNotMatch(source, /<AdSlot\b/);
   });
 });
